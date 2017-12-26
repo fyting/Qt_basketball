@@ -1,0 +1,45 @@
+待解决：删除按钮滑动状态栏，管理员编辑首页文本
+
+数据库
+basketball.db
+球迷账号密码表
+fantable(number char(30) unique primary key, password char(30))
+球队账号密码表
+teamtable(number char(30) unique primary key, password char(30))
+管理员账号密码表
+mantable(number char(30) unique primary key, password char(30))
+球队信息表
+teaminfortable(id char(30) unique primary key, name char(50), company char(50), manager char(50), coach char(50))
+球员信息表
+playerinfortable(playerid char(30) unique primary key, id char(30), name char(50), age char(30), tall char(30), weight char(30), pos char(30))
+场馆信息表
+gyminfortable(name char(50) unique primary key, location char(100), hold char(50))
+比赛表
+matchtable(digitime integer, team1 char(50), team2 char(50), gymname char(50), gymlocation char(100), time char(100) unique primary key)
+结果表
+scoretable(team1 char(50), score1 integer, team2 char(50), score2 integer, gymname char(50), time char(100) unique primary key)
+球票表
+ticket(team1 char(50), team2 char(50), gymname char(50), gymlocation char(50), time char(50) , price char(50), status char(50), hold integer )
+
+6.24 
+删除球队(ok) 查看全部球队(ok) 比赛结果(只要当前时间大于比赛时间就可以发布结果，ok) 比赛表里也删除(ok)
+对球员表进行排序(ok)
+生成球票表(ok)
+球票发售后不能修改(ok)删球队 不能修改(ok)删场馆 不能修改(ok)删除比赛 //改变策略，去掉部分冗余功能
+比赛过了时间对应球票信息删除(不删除了，只改变剩余票数即可)
+球迷查看球队 查看球员 买票(ok)
+管理员编辑首页文本进txt，打开时读入？？？
+
+6.27
+修改比赛(ok) 删除比赛在管理球票中显示(ok)
+删除比赛在发布比赛结果里显示(ok)
+删除比赛发售后不能删除(ok)
+
+时间不能作为主键(ok?)
+
+最少5名球员才能参加比赛
+球队oper查看球员球队全打开全关闭(ok)
+
+可以删除球队，当这个球队没有参加比赛时(ok)
+可以删除球馆，当这个球馆没有举办比赛时(ok)
+可以删除球员，当这个球员所在球队没有参加比赛时(ok)
